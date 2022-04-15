@@ -1,0 +1,22 @@
+.table {
+  margin-top: 2px;
+  overflow: scroll;
+  height: 300px;
+  color: #6a5d5d;
+  background-color: white;
+}
+
+.table tr {
+  /* by using this, we can use up all width of the screen */
+  display: flex;
+  justify-content: space-between;
+}
+
+.table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+.table td {
+  padding: 0.5rem;
+  border: none;
+}
