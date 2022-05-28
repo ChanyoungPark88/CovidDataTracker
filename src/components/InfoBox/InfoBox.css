@@ -6,6 +6,12 @@
 
 .infoBox:not(:last-child) {
   margin-right: 7px;
+  background-color: transparent;
+}
+
+.infoBox:last-child {
+  margin-right: 7px;
+  background-color: transparent;
 }
 
 .infoBox--grey {
@@ -13,7 +19,7 @@
 }
 
 .infoBox--red {
-  border-color: red;
+  border-color: #cc1034;
 }
 
 .infoBox--blue {

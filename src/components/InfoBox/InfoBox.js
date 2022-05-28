@@ -11,7 +11,7 @@ function infoBox({ title, cases, total, active, ...props }) {
       ${title === 'Vaccinated' && 'infoBox--blue'}`}
     >
       <CardContent>
-        <Typography className='infoBox__title' color='textSecondary'>
+        <Typography className='infoBox__title' color='#ffffff'>
           {title}
         </Typography>
 
@@ -23,7 +23,7 @@ function infoBox({ title, cases, total, active, ...props }) {
           {cases}
         </h2>
 
-        <Typography className='infoBox__total' color='textSecondary'>
+        <Typography className='infoBox__total' color='#ffffff'>
           {total} Total
         </Typography>
       </CardContent>

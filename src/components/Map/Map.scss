@@ -1,15 +1,19 @@
 .map {
-  height: 600px;
+  height: 500px;
   background-color: white;
   padding: 1rem;
   border-radius: 20px;
   margin-top: 16px;
   box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+  // .dark-mode {
+  //   filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg)
+  //     saturate(0.3) brightness(0.7);
+  // }
 }
 
 .info-flag img {
   width: 100px;
-  /* border-radius: 3px; */
+  // border-radius: 3px;
 }
 
 .info-flag {
@@ -25,14 +29,13 @@
 .info-vaccinated {
   font-size: 14px;
   margin-top: 3px;
+  background-color: #21272e;
 }
 
 .info-name {
   font-size: 18px;
   font-weight: bold;
-  color: #555;
+  color: #ffffff;
   text-align: center;
   margin-top: 3px;
 }
-
-/*# sourceMappingURL=Map.css.map */

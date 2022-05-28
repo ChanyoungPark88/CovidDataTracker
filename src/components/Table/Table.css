@@ -1,9 +1,13 @@
 .table {
   margin-top: 2px;
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow-y: scroll;
   height: 300px;
-  color: #6a5d5d;
-  background-color: white;
+  color: #ffffff;
+  /* background-color: white; */
+}
+.table::-webkit-scrollbar {
+  display: none;
 }
 
 .table tr {
@@ -12,9 +16,9 @@
   justify-content: space-between;
 }
 
-.table tr:nth-of-type(odd) {
+/* .table tr:nth-of-type(odd) {
   background-color: #f3f2f8;
-}
+} */
 
 .table td {
   padding: 0.5rem;

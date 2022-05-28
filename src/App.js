@@ -111,80 +111,90 @@ function App() {
   };
   return (
     <div className='app'>
-      <div className='app__left'>
-        {/* Header */}
-        <div className='app__header'>
+      <div className='app__header'>
+        <div className='app__name'>
           <h1>💉COVID DATA TRACKER💉</h1>
-          <FormControl className='app__dropdown'>
-            <Select
-              variant='outlined'
-              onChange={onCountryChange}
-              value={country}
-            >
-              <MenuItem value='worldwide'>Worldwide</MenuItem>
-              {/* Look through all the counties */}
-              {countries.map((country) => (
-                <MenuItem value={country.value}>{country.name}</MenuItem>
-              ))}
-            </Select>
-          </FormControl>
         </div>
-        <div className='app__stats'>
-          <InfoBox
-            title='Cases'
-            onClick={(event) => setCasesType('cases')}
-            active={casesType === 'cases'}
-            cases={beautifyStatHelper(countryInfo.todayCases)}
-            total={beautifyStatHelper(countryInfo.cases)}
-          />
-          <InfoBox
-            title='Deaths'
-            onClick={(event) => setCasesType('deaths')}
-            active={casesType === 'deaths'}
-            cases={beautifyStatHelper(countryInfo.todayDeaths)}
-            total={beautifyStatHelper(countryInfo.deaths)}
-          />
-          {/* <InfoBox
-            title='Recovered'
-            onClick={(event) => setCasesType('recovered')}
-            active={casesType === 'recovered'}
-            cases={beautifyStatHelper(countryInfo.todayRecovered)}
-            total={beautifyStatHelper(countryInfo.recovered)}
-          /> */}
-          <InfoBox
-            title='Vaccinated'
-            onClick={(event) => setCasesType('vaccinated')}
-            active={casesType === 'vaccinated'}
-            cases={beautifyStatHelper(
-              getVaccineNum(vaccineInfo, 1) - getVaccineNum(vaccineInfo, 2)
-            )} // get today's vaccine data : ( today's cases - yesterday's cases)
-            total={beautifyStatHelper(getVaccineNum(vaccineInfo, 0))}
-          />
-        </div>
-
-        <Map
-          center={mapCenter}
-          zoom={mapZoom}
-          countries={mapCountries}
-          vaccines={mapVaccines}
-          casesType={casesType}
-        />
+        <FormControl className='app__dropdown'>
+          <Select
+            className='app__menuItem'
+            variant='outlined'
+            onChange={onCountryChange}
+            value={country}
+          >
+            <MenuItem className='app_Items' value='worldwide'>
+              Worldwide
+            </MenuItem>
+            {/* Look through all the counties */}
+            {countries.map((country) => (
+              <MenuItem className='app_Items' value={country.value}>
+                {country.name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
       </div>
+      <div className='app__sub'>
+        <div className='app__left'>
+          {/* Header */}
 
-      <Card className='app__right'>
-        <CardContent>
-          <h3>Worldwide total {casesType} (high - low)</h3>
-          <Table
-            countries={tableData}
+          <div className='app__stats'>
+            <InfoBox
+              title='Cases'
+              onClick={(event) => setCasesType('cases')}
+              active={casesType === 'cases'}
+              cases={beautifyStatHelper(countryInfo.todayCases)}
+              total={beautifyStatHelper(countryInfo.cases)}
+            />
+            <InfoBox
+              title='Deaths'
+              onClick={(event) => setCasesType('deaths')}
+              active={casesType === 'deaths'}
+              cases={beautifyStatHelper(countryInfo.todayDeaths)}
+              total={beautifyStatHelper(countryInfo.deaths)}
+            />
+            {/* <InfoBox
+              title='Recovered'
+              onClick={(event) => setCasesType('recovered')}
+              active={casesType === 'recovered'}
+              cases={beautifyStatHelper(countryInfo.todayRecovered)}
+              total={beautifyStatHelper(countryInfo.recovered)}
+            /> */}
+            <InfoBox
+              title='Vaccinated'
+              onClick={(event) => setCasesType('vaccinated')}
+              active={casesType === 'vaccinated'}
+              cases={beautifyStatHelper(
+                getVaccineNum(vaccineInfo, 1) - getVaccineNum(vaccineInfo, 2)
+              )} // get today's vaccine data : ( today's cases - yesterday's cases)
+              total={beautifyStatHelper(getVaccineNum(vaccineInfo, 0))}
+            />
+          </div>
+
+          <Map
+            center={mapCenter}
+            zoom={mapZoom}
+            countries={mapCountries}
+            vaccines={mapVaccines}
             casesType={casesType}
-            vaccines={tableVaccine}
           />
-          <h3 className='app__graphName'>
-            Worldwide daily records (past 30 days)
-          </h3>
-          <LineGraph className='app__graph' casesType={casesType} />
-        </CardContent>
-      </Card>
+        </div>
+        <Card className='app__right'>
+          <CardContent>
+            <h3>Worldwide total {casesType} (high - low)</h3>
+            <Table
+              className='app__table'
+              countries={tableData}
+              casesType={casesType}
+              vaccines={tableVaccine}
+            />
+            <h3 className='app__graphName'>
+              Worldwide daily records (past 30 days)
+            </h3>
+            <LineGraph className='app__graph' casesType={casesType} />
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
