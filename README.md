@@ -1,3 +1,3 @@
 # CovidDataTracker
 
-![CovidDataTracker]: https://covidtracker-chanyoungpark88.vercel.app/(./Covid-Data-Tracker.gif)
+![CovidDataTracker](./Covid-Data-Tracker.gif, https://covidtracker-chanyoungpark88.vercel.app/)
