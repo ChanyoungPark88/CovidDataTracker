@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:wght@300&display=swap');
+
 .infoBox {
   flex: 1;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.infoBox h2 {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .infoBox:not(:last-child) {
@@ -31,6 +38,8 @@
   font-weight: 600;
   font-size: 1.65rem;
   margin-bottom: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .infoBox__red {
@@ -38,6 +47,8 @@
   font-weight: 600;
   font-size: 1.65rem;
   margin-bottom: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .infoBox__blue {
@@ -45,4 +56,12 @@
   font-weight: 600;
   font-size: 1.65rem;
   margin-bottom: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.infoBox__total,
+.infoBox__title {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }

@@ -1,3 +1,3 @@
 # CovidDataTracker
 
-![CovidDataTracker](./Covid-Data-Tracker.gif)
+![CovidDataTracker](./Covid%20Data%20Tracker.mp4)
