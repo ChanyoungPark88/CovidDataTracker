@@ -1,5 +1,3 @@
 # CovidDataTracker
 
-![CovidDataTracker](./Covid-Data-Tracker.gif)
-
-LiveWebpage: : https://covidtracker-chanyoungpark88.vercel.app
+<a href="https://covidtracker-chanyoungpark88.vercel.app" rel="CovidDataTracker">![CovidDataTracker](./Covid-Data-Tracker.gif)</a>
